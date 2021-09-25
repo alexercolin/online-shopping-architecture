@@ -14,11 +14,11 @@ test("Should calculate the order amount", function () {
     expect(order.orderPrice()).toBe(142.5);
 });
 test("Should validate if the cpf is valid", function () {
-    const cpfNumber = "111.444.777-35";
+    const cpfNumber = "471.982.928-79";
     const purchaseDescription = "Teclado Gamer";
     const price = 150;
     const quantity = 1;
     const discount = 5;
     const cpftest = new Order_1.default(cpfNumber, purchaseDescription, price, quantity, discount);
-    expect(cpftest.cpfValidator).toBeTruthy();
+    expect(cpftest.cpfValidator()).toBe("471982928");
 });

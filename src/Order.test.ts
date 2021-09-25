@@ -19,7 +19,7 @@ test("Should calculate the order amount", function () {
 });
 
 test("Should validate if the cpf is valid", function () {
-  const cpfNumber = "111.444.777-35";
+  const cpfNumber = "471.982.928-79";
   const purchaseDescription = "Teclado Gamer";
   const price = 150;
   const quantity = 1;
@@ -32,5 +32,5 @@ test("Should validate if the cpf is valid", function () {
     quantity,
     discount
   );
-  expect(cpftest.cpfValidator).toBeTruthy();
+  expect(cpftest.cpfValidator()).toBe("471982928");
 });
